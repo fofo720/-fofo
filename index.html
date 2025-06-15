@@ -1,0 +1,142 @@
+
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ê«Ì ›«Ì ‰  - Ê”Ìÿ ‘»ﬂ«  «·Ê«Ì ›«Ì</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-wifi"></i>
+                <h1>Ê«Ì ›«Ì ‰ </h1>
+            </div>
+            <div class="user-actions">
+                <button id="loginBtn" class="btn"> ”ÃÌ· «·œŒÊ·</button>
+                <button id="registerBtn" class="btn btn-primary">≈‰‘«¡ Õ”«»</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>«»ÕÀ ⁄‰ √ﬁ—» ‘»ﬂ«  «·Ê«Ì ›«Ì ÕÊ·ﬂ</h2>
+                    <p>«‘ —ﬂ »”ÂÊ·… Ê«Õ’· ⁄·Ï ﬂ—Ê  « ’«· ›Ê—Ì…</p>
+                    <button class="btn btn-large" id="findWifiBtn">
+                        <i class="fas fa-map-marker-alt"></i> «»ÕÀ ⁄‰ ‘»ﬂ«  ﬁ—Ì»…
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <img src="wifi.png" alt="‘»ﬂ«  Ê«Ì ›«Ì">
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>« ’«· ”—Ì⁄</h3>
+                    <p>« ’· »√ﬁ—» ‘»ﬂ… »”—⁄… ›«∆ﬁ…</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>œ›⁄ ≈·ﬂ —Ê‰Ì</h3>
+                    <p>«œ›⁄ ⁄»— «·„Õ«›Ÿ «·≈·ﬂ —Ê‰Ì…</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3> ÕœÌœ „Ê«ﬁ⁄</h3>
+                    <p>«⁄—› √ﬁ—» «·‘»ﬂ«  ≈·Ìﬂ</p>
+                </div>
+            </section>
+
+            <section class="complaints">
+                <h2>«·‘ﬂ«ÊÏ Ê«·„ﬁ —Õ« </h2>
+                <textarea id="complaintText" placeholder="«ﬂ » ‘ﬂÊ«ﬂ √Ê „ﬁ —Õﬂ Â‰«..."></textarea>
+                <button class="btn" id="submitComplaint">≈—”«·</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2023 Ê«Ì ›«Ì ‰ . Ã„Ì⁄ «·ÕﬁÊﬁ „Õ›ÊŸ….</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ‰„«–Ã  ”ÃÌ· «·œŒÊ· Ê«· ”ÃÌ· -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2> ”ÃÌ· «·œŒÊ·</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginPhone">—ﬁ„ «·Â« ›</label>
+                    <input type="tel" id="loginPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">ﬂ·„… «·„—Ê—</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary"> ”ÃÌ· «·œŒÊ·</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>≈‰‘«¡ Õ”«» ÃœÌœ</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="firstName">«·«”„ «·√Ê·</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="middleName">«·«”„ «·√Ê”ÿ</label>
+                    <input type="text" id="middleName">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">«”„ «·⁄«∆·…</label>
+                    <input type="text" id="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">—ﬁ„ «·Â« ›</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">ﬂ·„… «·„—Ê—</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword"> √ﬂÌœ ﬂ·„… «·„—Ê—</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">«· «·Ì</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="verificationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>«· Õﬁﬁ „‰ —ﬁ„ «·Â« ›</h2>
+            <p>”Ì „ ≈—”«· —„“ «· Õﬁﬁ ≈·Ï —ﬁ„ «·Â« › «·„”Ã·</p>
+            <form id="verificationForm">
+                <div class="form-group">
+                    <label for="verificationCode">—„“ «· Õﬁﬁ</label>
+                    <input type="text" id="verificationCode" required>
+                </div>
+                <button type="submit" class="btn btn-primary"> Õﬁﬁ</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
